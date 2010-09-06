@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
@@ -11,7 +11,7 @@ for name in *; do
         let "cutline = $cutline - 1"
         echo "Updating $target"
         head -n $cutline "$target" > update_tmp
-        startline=`tail -r "$name" | grep -n -m1 "$cutstring" | sed "s/:.*//"`
+        startline=`tac "$name" | grep -n -m1 "$cutstring" | sed "s/:.*//"`
         if [[ -n $startline ]]; then
           tail -n $startline "$name" >> update_tmp
         else
