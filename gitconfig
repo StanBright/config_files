@@ -1,7 +1,3 @@
-# ADD LOCAL CONFIGURATION HERE
-
-
-# DO NOT EDIT BELOW THIS LINE
 [push]
   default = tracking
 [color]
@@ -26,3 +22,6 @@
   graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ci = commit
   ca = commit --amend
+[user]
+	name = Stan Bright
+	email = stan@stanbright.com
