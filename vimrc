@@ -84,24 +84,24 @@ let mapleader = ","
 map <Leader>R :e doc/README_FOR_APP<CR>
 
 " Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>i :Rintegrationtest 
-map <Leader>h :Rhelper 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
-map <Leader>si :RSintegrationtest 
+map <Leader>m :Rmodel             <cr>
+map <Leader>c :Rcontroller        <cr>
+map <Leader>v :Rview              <cr>
+map <Leader>u :Runittest          <cr>
+map <Leader>f :Rfunctionaltest    <cr>
+map <Leader>i :Rintegrationtest   <cr>
+map <Leader>h :Rhelper            <cr>
+map <Leader>tm :RTmodel           <cr>
+map <Leader>tc :RTcontroller      <cr>
+map <Leader>tv :RTview            <cr>
+map <Leader>tu :RTunittest        <cr>
+map <Leader>tf :RTfunctionaltest  <cr>
+map <Leader>sm :RSmodel           <cr>
+map <Leader>sc :RScontroller      <cr>
+map <Leader>sv :RSview            <cr>
+map <Leader>su :RSunittest        <cr>
+map <Leader>sf :RSfunctionaltest  <cr>
+map <Leader>si :RSintegrationtest <cr>
 
 " Hide search highlighting
 map <Leader>l :set invhls <CR>
@@ -185,9 +185,9 @@ set virtualedit=all
 map <C-O> :BufExplorer<CR>
 imap <C-O> <Esc>:w<Esc>:BufExplorer<CR>
 
-" Useful combinations - don't work :(
-" imap <C-S> <Esc>:w<CR>
-" map  <C-S> :w<CR>
+" Useful combinations
+imap <C-P> <Esc>:w<CR>
+map  <C-P> :w<CR>
 
 " FuzzyFinder
 map <C-F> :FufFile **/<Enter>
@@ -196,5 +196,5 @@ map <C-F> :FufFile **/<Enter>
 map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*." .  expand("%:e") <Bar> cw<CR>
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
-map <leader>c :botright cw 10<cr>
-map <S-F> :grep -R --exclude *.swp 
+map <leader>w :botright cw 10<cr>
+map <C-G> :grep -R --exclude *.swp 
