@@ -11,6 +11,8 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set ignorecase
+set hlsearch " Search matches are highlighted
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -175,3 +177,24 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 " Window navigation
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
+
+set mouse=a
+set virtualedit=all
+
+" BufExplorer
+map <C-O> :BufExplorer<CR>
+imap <C-O> <Esc>:w<Esc>:BufExplorer<CR>
+
+" Useful combinations - don't work :(
+" imap <C-S> <Esc>:w<CR>
+" map  <C-S> :w<CR>
+
+" FuzzyFinder
+map <C-F> :FufFile **/<Enter>
+
+" Searching
+map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*." .  expand("%:e") <Bar> cw<CR>
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>
+map <leader>c :botright cw 10<cr>
+map <S-F> :grep -R --exclude *.swp 
