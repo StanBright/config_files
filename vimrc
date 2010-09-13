@@ -6,6 +6,7 @@ set nocompatible
 set backspace=indent,eol,start
 
 set nobackup
+set noswapfile
 set nowritebackup
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -194,7 +195,32 @@ map <C-F> :FufFile **/<Enter>
 
 " Searching
 map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*." .  expand("%:e") <Bar> cw<CR>
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
-map <leader>w :botright cw 10<cr>
+" map <leader>n :cn<cr>
+" map <leader>p :cp<cr>
+" map <leader>w :botright cw 10<cr>
 map <C-G> :grep -R --exclude *.swp 
+
+" Turn off the need to write on changing buffers
+set hidden
+set title
+set pastetoggle=<F2>
+
+" Usefull for long lines. Very usefull!!!
+" Go to the next rown in the editor instead of the next line
+nnoremap j gj
+nnoremap k gk
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" It clears the search buffer when you press ,/ 
+" I don't have to search for a;kfdja;kfjafdaf now :)
+nmap <silent> ,/ :let @/=""<CR>
+
+" NERDTree Navigation
+nmap <leader>n :NERDTreeClose<CR>:NERDTreeToggle<CR>
+nmap <leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
+nmap <leader>N :NERDTreeClose<CR>
