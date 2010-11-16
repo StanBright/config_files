@@ -197,7 +197,7 @@ map <C-F> :FufFile **/<Enter>
 map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*." .  expand("%:e") <Bar> cw<CR>
 " map <leader>n :cn<cr>
 " map <leader>p :cp<cr>
-" map <leader>w :botright cw 10<cr>
+map <leader>w :botright cw 10<cr>
 map <C-G> :grep -R --exclude *.swp 
 
 " Turn off the need to write on changing buffers
