@@ -224,3 +224,8 @@ nmap <silent> ,/ :let @/=""<CR>
 nmap <leader>n :NERDTreeClose<CR>:NERDTreeToggle<CR>
 nmap <leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
 nmap <leader>N :NERDTreeClose<CR>
+
+" jQuery syntax support
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
+let g:SimpleJsIndenter_BriefMode = 1
