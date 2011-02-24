@@ -228,4 +228,9 @@ nmap <leader>N :NERDTreeClose<CR>
 " jQuery syntax support
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
+
 let g:SimpleJsIndenter_BriefMode = 1
+
+" yaml syntax support
+au BufNewFile,BufRead *.yaml,*.yml set ft=yaml syntax=yaml
+autocmd FileType yaml set ai sw=2 sts=2
