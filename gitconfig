@@ -7,7 +7,8 @@
 [core]
 	excludesfile = ~/.gitignore
 [format]
-  pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
+  # pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
+  pretty = %Cblue%h%Creset %Cgreen[%cd]%Creset (%an) %s
 [alias]
   c = commit -m
   a = add

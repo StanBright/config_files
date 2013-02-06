@@ -2,6 +2,18 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+filetype off                   " required! vundle
+
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+" Bundle 'Valloric/YouCompleteMe'
+
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -63,17 +75,19 @@ endif " has("autocmd")
 
 "folding settings
 set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
+set foldnestmax=2      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+set foldenable
+set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
 
-if has("folding")
-  set foldenable
-  set foldmethod=syntax
-  set foldlevel=1
-  set foldnestmax=2
-  set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
-endif
+" if has("folding")
+"   set foldenable
+"   set foldmethod=syntax
+"   set foldlevel=1
+"   set foldnestmax=2
+"   set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
+" endif
 
 " Softtabs, 2 spaces
 set tabstop=2
