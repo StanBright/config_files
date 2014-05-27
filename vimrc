@@ -2,15 +2,14 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-filetype off                   " required! vundle
-
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" filetype off                   " required! vundle
+" 
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+" Bundle 'gmarik/vundle'
 " Bundle 'Valloric/YouCompleteMe'
 
 

@@ -6,6 +6,8 @@
 	branch = auto
 [core]
 	excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
+	quotepath = false
 [format]
   # pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
   pretty = %Cblue%h%Creset %Cgreen[%cd]%Creset (%an) %s
@@ -21,6 +23,8 @@
   out = log origin..HEAD
   qpl = log --pretty=\"%Cblue%h%Creset %Cgreen[%cr]%Creset %s\" origin/production..origin/master
   graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lg = log --graph --decorate --pretty=oneline --abbrev-commit
+  lga = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ci = commit
   ca = commit --amend
 [user]
