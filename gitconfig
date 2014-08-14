@@ -1,17 +1,20 @@
 [push]
   default = tracking
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
+[color "diff"]
+    whitespace = red reverse
 [core]
-	excludesfile = ~/.gitignore
-	editor = /usr/bin/vim
-	quotepath = false
+  excludesfile = ~/.gitignore
+  editor = /usr/bin/vim
+  quotepath = false
 [format]
   # pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
   pretty = %Cblue%h%Creset %Cgreen[%cd]%Creset (%an) %s
 [alias]
+  ml = !~/bin/method_log.rb
   c = commit -m
   a = add
   di = diff
@@ -27,13 +30,15 @@
   lga = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ci = commit
   ca = commit --amend
+  oldest-ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+  bd = !git diff $(git oldest-ancestor)
 [user]
-	name = Stan Bright
-	email = stan@stanbright.com
+  name = Stan Bright
+  email = stan@stanbright.com
 [giggle]
-	main-window-maximized = true
-	main-window-geometry = 0x0+0+0
-	main-window-view = HistoryView
-	history-view-vpane-position = 500
-	file-view-hpane-position = 392
-	file-view-vpane-position = 396
+  main-window-maximized = true
+  main-window-geometry = 0x0+0+0
+  main-window-view = HistoryView
+  history-view-vpane-position = 500
+  file-view-hpane-position = 392
+  file-view-vpane-position = 396
