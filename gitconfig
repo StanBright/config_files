@@ -28,10 +28,13 @@
   graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   lg = log --graph --decorate --pretty=oneline --abbrev-commit
   lga = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  # show body
+  shb = log --format=%B -n 1
   ci = commit
   ca = commit --amend
   oldest-ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
   bd = !git diff $(git oldest-ancestor)
+  ch = checkout
 [user]
   name = Stan Bright
   email = stan@stanbright.com
