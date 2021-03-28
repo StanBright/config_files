@@ -30,3 +30,5 @@ alias gchs="git checkout staging"
 alias gchp="git checkout production"
 alias gcp="git cherry-pick"
 alias gst="git status"
+alias ls='ls -GFh'
+
