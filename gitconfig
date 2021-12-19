@@ -10,6 +10,7 @@
   excludesfile = ~/.gitignore
   editor = /usr/bin/vim
   quotepath = false
+	pager = cat
 [format]
   # pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
   pretty = %Cblue%h%Creset %Cgreen[%cd]%Creset (%an) %s
