@@ -71,9 +71,10 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails ruby asdf brew bundler colorize emoji fzf gem npm zsh-autosuggestions dirhistory history)
+plugins=(git rails ruby asdf brew bundler colorize emoji fzf gem npm dirhistory history)
 
 source $ZSH/oh-my-zsh.sh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
