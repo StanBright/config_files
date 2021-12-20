@@ -43,4 +43,5 @@ alias gr='grep'
 alias https='http --default-scheme=https'
 alias be='bundle exec'
 alias ls='ls -GFh'
-
+alias ibrew='arch -x86_64 brew'
+alias iasdf='arch -x86_64 asdf'
