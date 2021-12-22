@@ -103,3 +103,13 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -r "$HOME/.bash_aliases" ] && source "$HOME/.bash_aliases"
+
+# A work-around for getting asdf(0.9.0) working with brew(3.3.9)
+# Try removing this work-around in the future once brew and asdf have newer versions
+# ref: https://github.com/ohmyzsh/ohmyzsh/issues/10484
+#      https://github.com/asdf-vm/asdf/issues/1103
+#      https://github.com/ohmyzsh/ohmyzsh/pull/10481
+#      
+unset ASDF_DIR
+source $(brew --prefix asdf)/libexec/asdf.sh
+
