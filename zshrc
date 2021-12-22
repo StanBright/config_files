@@ -109,7 +109,10 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # ref: https://github.com/ohmyzsh/ohmyzsh/issues/10484
 #      https://github.com/asdf-vm/asdf/issues/1103
 #      https://github.com/ohmyzsh/ohmyzsh/pull/10481
-#      
-unset ASDF_DIR
-source $(brew --prefix asdf)/libexec/asdf.sh
+#
+ASDF_SRC1=$(brew --prefix asdf)/libexec/asdf.sh
+if [[ -f "$ASDF_SRC1" ]]; then
+  unset ASDF_DIR
+  source "$ASDF_SRC1"
+fi
 
